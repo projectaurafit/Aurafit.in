@@ -1,0 +1,17 @@
+[build]
+  publish = "."
+
+[build.processing]
+  skip_processing = true
+
+# Hash-based SPA routes are handled in the browser. These aliases make
+# optional clean entry URLs work without changing the existing UI/router.
+[[redirects]]
+  from = "/admin"
+  to = "/admin.html"
+  status = 200
+
+[[redirects]]
+  from = "/admin/*"
+  to = "/admin.html"
+  status = 200
